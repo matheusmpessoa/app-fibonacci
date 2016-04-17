@@ -1,0 +1,23 @@
+<ion-view view-title="{{calculo}}">
+
+    <ion-content>
+        <form id="form">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Digite a quantidade de números desejado:</span>
+                    <input type="text" id="numero" name="numero" ng-model="valorInserido"  onkeypress="return SomenteNumero(event)"
+                    placeholder="Digite a quantidade de números desejado">
+                </label>
+                <br>
+                <button class="button button-outline button-stable" onclick="return fiboCalc();">Calcular</button>
+            </div>
+            <div class="valorInserido">
+                <p><b>Quantidade de números desejado:</b> <span ng-bind="valorInserido"></span></p>
+            </div>
+            <div class="result">
+                <p><b>Resultado do cálculo de fibonacci:</b> <span id="p1"></span></p>
+            </div>
+        </form>
+    </ion-content>
+
+</ion-view>
